@@ -4,20 +4,21 @@
 
 AI-Powered Placement Preparation Platform is a full-stack web application designed to help students prepare for campus placements through profile management, resume analysis, aptitude practice, company-specific preparation, and AI-powered mock interviews.
 
-The platform provides a centralized solution where students can build their profiles, upload resumes, practice aptitude questions, prepare for company recruitment processes, and receive interview feedback.
+The platform aims to provide a single solution for students to manage their placement preparation journey instead of using multiple disconnected platforms.
 
 ---
 
 ## Problem Statement
 
-Students often use multiple platforms for placement preparation:
+Students preparing for placements often face challenges such as:
 
-* Resume building websites
-* Aptitude practice platforms
-* Interview preparation resources
-* Company-specific preparation portals
+* Managing resumes across different platforms
+* Practicing aptitude questions from multiple sources
+* Preparing for company-specific recruitment processes
+* Tracking placement readiness
+* Receiving interview feedback
 
-This project combines all these functionalities into a single platform, providing a structured and personalized placement preparation experience.
+This project solves these problems by providing a centralized placement preparation platform.
 
 ---
 
@@ -34,7 +35,7 @@ This project combines all these functionalities into a single platform, providin
 
 * Python
 * Django
-* Django REST Framework
+* Django REST Framework (DRF)
 * JWT Authentication
 
 ### Database
@@ -48,7 +49,7 @@ This project combines all these functionalities into a single platform, providin
 
 ---
 
-## Architecture
+## Project Architecture
 
 Frontend (React)
 ↓
@@ -62,67 +63,67 @@ PostgreSQL Database
 
 ## Features
 
-### Authentication Module
+### Authentication Module ✅
 
 * User Registration
 * Secure Login
 * JWT Authentication
 * Access Token Generation
 * Refresh Token Generation
-* Session Management
+* Local Storage Token Management
 
-### Profile Management Module
+### Profile Management Module ✅
 
 * Student Profile Creation
-* Academic Information
+* Academic Information Storage
 * Skills Management
 * CGPA Tracking
-* Profile Updates
+* PostgreSQL Integration
 
-### Resume Module (Upcoming)
+### Resume Management Module 🚧
 
 * Resume Upload
 * Resume Storage
-* Resume Score Analysis
-* Skill Extraction
-* ATS Compatibility Check
+* Resume Analysis
+* Resume Scoring
+* ATS Compatibility Analysis
 
-### Aptitude Module (Upcoming)
+### Aptitude Preparation Module 🚧
 
 * Aptitude Question Bank
 * Category-wise Questions
-* Timed Tests
 * Performance Tracking
-* Score Analysis
+* Timed Assessments
 
-### Company Preparation Module (Upcoming)
+### Company Preparation Module 🚧
 
-* Company Eligibility Tracking
-* Recruitment Process Information
-* Previous Interview Experiences
+* Company Eligibility Criteria
+* Hiring Process Information
 * Preparation Resources
+* Company Tracking
 
-### AI Mock Interview Module (Upcoming)
+### AI Mock Interview Module 🚧
 
-* Interview Question Generation
-* Answer Submission
+* Interview Questions
+* Answer Evaluation
 * AI Feedback
 * Performance Scoring
-* Improvement Suggestions
 
-### Dashboard Module (Upcoming)
+### Dashboard Module 🚧
 
 * Placement Readiness Score
 * Resume Score
-* Aptitude Performance
-* Interview Performance
-* Activity Tracking
+* Aptitude Score
+* Interview Score
+* Progress Tracking
 
 ---
 
 ## Database Models
 
 ### Profile
+
+Stores student information:
 
 * User
 * College
@@ -132,6 +133,8 @@ PostgreSQL Database
 
 ### Resume
 
+Stores uploaded resumes:
+
 * User
 * Resume File
 * Resume Score
@@ -139,11 +142,15 @@ PostgreSQL Database
 
 ### Company
 
+Stores company information:
+
 * Company Name
 * Eligibility Criteria
 * Hiring Process
 
 ### Aptitude Question
+
+Stores aptitude questions:
 
 * Question
 * Options
@@ -151,6 +158,8 @@ PostgreSQL Database
 * Category
 
 ### Interview Session
+
+Stores interview data:
 
 * User
 * Question
@@ -166,16 +175,16 @@ PostgreSQL Database
 
 #### Project Setup
 
-* Django Project Initialization
-* React Project Initialization
+* Django Project Setup
+* React + Vite Setup
 * PostgreSQL Configuration
-* Environment Setup
+* Environment Configuration
 
 #### Backend Development
 
 * Django REST Framework Setup
-* Database Configuration
-* Application Structure Design
+* PostgreSQL Integration
+* Application Architecture Design
 
 #### Database Design
 
@@ -198,8 +207,8 @@ PostgreSQL Database
 #### Day 1
 
 * User Registration API
-* User Serializer Creation
-* Registration Endpoint Configuration
+* User Serializer
+* Registration Endpoint
 
 #### Day 2
 
@@ -209,52 +218,82 @@ PostgreSQL Database
 
 #### Day 3
 
-* Profile API Development
+* Profile API
 * Profile Serializer
 * Profile Creation API
-* PostgreSQL Integration Testing
+* PostgreSQL Testing
 
 #### Day 4
 
 * React Frontend Integration
 * Axios Configuration
 * Registration Form Development
-* Backend Connection Testing
+* Frontend ↔ Backend Communication
 
 #### Day 5
 
-* Login Page Development
-* JWT Token Storage
-* Local Storage Integration
-* Authentication Flow Testing
+* React Login Page
+* JWT Authentication Flow
+* Access Token Storage
+* Refresh Token Storage
+* Login Testing
+
+#### Day 6
+
+* React Profile Form
+* Profile Creation from Frontend
+* PostgreSQL Data Storage
+* API Integration Testing
 
 ---
 
 ## Current Progress
 
-### Completed
+### Completed ✅
 
-* Backend Architecture
-* Database Design
+* Django Backend
+* PostgreSQL Database
+* REST APIs
 * User Registration
-* User Login
-* JWT Authentication
-* Profile API
-* React Integration
-* PostgreSQL Integration
+* JWT Login Authentication
+* Profile Management API
+* React Registration Page
+* React Login Page
+* JWT Token Storage
+* React Profile Form
+* Frontend ↔ Backend Integration
 
-### In Progress
+### In Progress 🚧
 
-* Profile Management UI
+* Dashboard Development
 
-### Planned
+### Planned 📋
 
 * Resume Upload System
-* Resume Analysis
+* Resume Analysis Engine
 * Aptitude Practice Platform
 * Company Preparation Module
 * AI Mock Interview System
-* Dashboard Analytics
+* Placement Readiness Dashboard
+
+---
+
+## API Endpoints
+
+### Authentication
+
+```http
+POST /api/accounts/register/
+POST /api/accounts/login/
+POST /api/accounts/refresh/
+```
+
+### Profiles
+
+```http
+GET /api/profiles/
+POST /api/profiles/
+```
 
 ---
 
@@ -263,7 +302,7 @@ PostgreSQL Database
 * Resume ATS Score Analysis
 * AI-Based Resume Suggestions
 * Personalized Learning Recommendations
-* Company Recommendation Engine
+* Company Recommendation System
 * Interview Performance Analytics
 * Placement Prediction Dashboard
 
@@ -285,5 +324,4 @@ Graduation Year: 2027
 
 🚧 Active Development
 
-Current Milestone: Week 2 - Authentication & Profile Management
-
+Current Milestone: Week 2 – Profile Management & Dashboard Development
