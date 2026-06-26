@@ -245,36 +245,55 @@ Stores interview data:
 * PostgreSQL Data Storage
 * API Integration Testing
 
+#### Day 7
+
+* Developed Dashboard page
+* Implemented reusable React components
+* Created Navbar component
+* Created ProfileCard component
+* Created StatsCard component
+* Integrated Dashboard with Profile API
+* Displayed profile information fetched from Django backend
+* Established component-based frontend architecture
+
+
 ---
+
+## Current Progress
 
 ## Current Progress
 
 ### Completed ✅
 
-* Django Backend
-* PostgreSQL Database
-* REST APIs
+* Django Backend Setup
+* PostgreSQL Integration
+* REST API Development
 * User Registration
-* JWT Login Authentication
+* JWT Authentication
+* User Login
 * Profile Management API
-* React Registration Page
-* React Login Page
+* React Frontend Setup
+* Axios Integration
+* Registration Page
+* Login Page
+* Dashboard Page
 * JWT Token Storage
-* React Profile Form
-* Frontend ↔ Backend Integration
+* Profile Form
+* Dashboard Components
+* API Integration with React
 
 ### In Progress 🚧
 
-* Dashboard Development
+* Resume Upload Module
 
 ### Planned 📋
 
-* Resume Upload System
-* Resume Analysis Engine
-* Aptitude Practice Platform
-* Company Preparation Module
-* AI Mock Interview System
-* Placement Readiness Dashboard
+* Resume Analysis
+* Aptitude Practice
+* Company Preparation
+* AI Mock Interview
+* Placement Analytics Dashboard
+
 
 ---
 
@@ -321,7 +340,10 @@ Graduation Year: 2027
 ---
 
 ## Project Status
+## Project Status
 
 🚧 Active Development
 
-Current Milestone: Week 2 – Profile Management & Dashboard Development
+Current Milestone: Week 3 – Resume Upload & Analysis Module
+
+Overall Progress: ~30% Complete
